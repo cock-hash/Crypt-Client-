@@ -14,7 +14,7 @@ public class Godmode extends Mod {
     }
     
 	public Godmode() {
-		super("Godmode", "Godmode", Keyboard.KEY_G, Category.PLAYER);
+		super("Godmode (unused)", "Godmode (unused)", Keyboard.KEY_G, Category.PLAYER);
 	}
 	public void onUpdate() {
 		if (this.isToggled()) {

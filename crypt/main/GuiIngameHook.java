@@ -24,22 +24,19 @@ public class GuiIngameHook extends GuiIngame {
         ScaledResolution scaledresolution = new ScaledResolution(this.mc);
         FontRenderer fontrenderer = this.getFontRenderer();
         GlStateManager.enableBlend();
-        mc.fontRendererObj.drawString("\2479Hax\247borus", 383, 2, 0xffffff);
+        mc.fontRendererObj.drawString("\247l\2479C\247brypt", 397, 2, 0xffffff);
         int count = 0;
-        
-        Random rand = new Random();
-        float r = rand.nextFloat() / 4f + 0.5f;
-        float g = rand.nextFloat() / 4f + 0.5f;
-        float b = rand.nextFloat() / 2f;
-        
+        long x = 0;
+        int index = 0;
         
         for(Mod m : Crypt.getMods()) {
         	if (m.isToggled()) {
         		int right = scaledresolution.getScaledWidth() - mc.fontRendererObj.getStringWidth(m.getArrayListName());
-				mc.fontRendererObj.drawString(m.getName(), right - 2, 12 + (count*12), 0xffffff);
+				mc.fontRendererObj.drawString(m.getName(), right - 2, 12 + (count*12), Rainbow.rainbowEffect(index + x*200000000L, 1.0F).getRGB());
         		count++;
+        		index++;
+        		x++;
         	}
-
         }
     }
 }

@@ -16,6 +16,6 @@ public class NoFall extends Mod {
 				mc.player.connection.sendPacket(new CPacketPlayer(true));
 			}
 		}
+		super.onUpdate();
 	}
-
 }

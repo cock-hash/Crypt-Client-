@@ -62,22 +62,7 @@ public class Crypt {
 			cmdManager.callCommand(s.substring(1));
 			return false;
 			}
-		for(Mod m : Crypt.getMods()) {
-			if(m.isToggled()) {
-				return onSendChatMessage(s);
-			}
-		}
 		return true;
-	}
-	
-	public static boolean onRecieveChatMessage(SPacketChat packet) {
-		for(Mod m : Crypt.getMods()) {
-			if(m.isToggled()) {
-				return onRecieveChatMessage(packet);
-			}
 		}
-		return true;
-	}
-	
 	
 }
