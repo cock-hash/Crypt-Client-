@@ -10,7 +10,7 @@ public class Bind extends Command {
 
 	@Override
 	public String getAlias() {
-		return "bind";
+		return "michi";
 	}
 	
 	@Override
@@ -20,7 +20,7 @@ public class Bind extends Command {
 	
 	@Override
 	public String getSyntax() {
-		return ".bind set (Mod) (Key) | .bind del (Mod) | .bind clear";
+		return ".michi set (Mod) (Key) | .bind del (Mod) | .michi clear";
 	}
 
 	@Override
